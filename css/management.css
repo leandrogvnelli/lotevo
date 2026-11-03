@@ -1,0 +1,341 @@
+/* Operational pages: the same type, colors and icon motion as the role panels. */
+.management-page .app-shell{grid-template-columns:274px minmax(0,1fr)}
+.management-page .app-sidebar{padding:35px 21px 25px}
+.management-page .app-main{max-width:1600px;padding:41px clamp(25px,3vw,54px) 28px}
+.management-page .app-sidebar>.brand{margin-bottom:49px}
+.management-page .app-sidebar nav{gap:7px}
+.management-page .app-nav-link{padding:15px 16px}
+.management-page .app-caption{margin-top:32px}
+.management-page .app-caption>span{max-width:750px}
+.management-page input,.management-page select,.management-page button{font:inherit}
+.management-page input:focus-visible,.management-page select:focus-visible,.management-page button:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+.management-page .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.management-header{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:30px;min-height:124px}
+.management-header h1{font-family:Alte,Arial,sans-serif;font-size:clamp(48px,5.2vw,77px);line-height:1;letter-spacing:-.06em;color:#10201e}
+.management-header p:not(.management-eyebrow){font-size:clamp(16px,1.7vw,22px);color:#536475;line-height:1.45;margin-top:8px}
+.management-eyebrow{font-size:12px;font-weight:700;letter-spacing:.13em;color:var(--green);margin:0 0 12px!important}
+.snapshot-date{display:inline-flex;align-items:center;gap:10px;flex-shrink:0;padding:11px 13px;color:#465c6e;font-size:14px;border:1px solid #e1e4dc;border-radius:8px;background:#fff6}
+.snapshot-date .ui-icon{width:23px;height:23px;color:var(--green)}
+.management-card{border:1px solid #dfe4df;background:#ffffff93;border-radius:9px;box-shadow:0 4px 20px #173f3505}
+.management-card h2,.card-heading h2{font-size:clamp(24px,2.2vw,32px);letter-spacing:-.045em;line-height:1.12;color:#13201f}
+.products-layout{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(330px,1fr);gap:16px;align-items:start}
+.product-list-card,.form-card{min-height:690px}
+.product-list-card{padding:27px 16px 18px}
+.card-heading{display:flex;justify-content:space-between;align-items:center;padding:0 10px 21px;gap:15px}
+.card-heading p{font-size:14px;color:#62707a;margin-top:5px}
+.quiet-link{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--green);white-space:nowrap}
+.quiet-link svg{width:16px;height:16px}
+.product-table,.lot-table,.history-table{overflow:hidden}
+.product-table-head,.product-data-row{display:grid;grid-template-columns:minmax(170px,2fr) minmax(105px,1.3fr) minmax(60px,.65fr) minmax(75px,.75fr) 16px;align-items:center;gap:8px}
+.product-table-head,.lot-table-head,.history-head{font-size:10px;font-weight:700;color:#3c4f5c;letter-spacing:.06em;background:#f2f2ef;padding:15px 15px;border-radius:6px}
+.product-data-row{padding:11px 14px;border-bottom:1px solid #e3e8e3;font-size:13px;color:#364649;min-height:75px;transition:background .22s,transform .22s}
+.product-data-row:last-child{border-bottom:0}
+.product-data-row:hover,.product-data-row:focus-visible{background:#e9f0e5;transform:translateX(2px)}
+.product-data-row strong{color:#182522;font-weight:700}
+.product-data-row>.ui-icon{height:16px;width:16px}
+.product-name,.lot-name{display:flex;align-items:center;gap:11px;min-width:0}
+.product-name strong{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.food-thumb{display:block;flex:none;width:44px;height:45px;position:relative;overflow:hidden;border-radius:10px;background-color:#ecf1e6;background-image:url('../assets/alimentos.png');background-repeat:no-repeat;background-size:198px 132px;box-shadow:inset 0 0 0 1px #173f3513;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.food-iogurte{background-position:-140px -74px;background-color:#edece4}
+.food-molho{background-position:-47px -43px;background-color:#eddfd3}
+.food-aveia{background-position:-129px -25px;background-color:#f0e9d9}
+.food-folhas{background-position:-147px -91px;background-color:#e8eed9}
+.food-pao{background-image:none;background-color:#f4e5d0}
+.food-pao:before{content:'';position:absolute;left:9px;top:13px;width:28px;height:19px;border-radius:52% 44% 48% 40%;background:#b57846;box-shadow:inset 3px 4px 0 #e7b478,2px 2px 0 #8c5b37;transform:rotate(-16deg)}
+.food-pao:after{content:'';position:absolute;left:21px;top:13px;height:13px;width:2px;border-left:2px solid #f6d19b;transform:rotate(31deg)}
+.food-leite{background-position:-159px -59px;background-color:#e8eef0}
+.food-arroz,.food-feijao{background-image:none;background-color:#efe8d8}
+.food-arroz:before,.food-feijao:before{content:'';position:absolute;inset:12px 7px;border-radius:50% 50% 44% 44%;background:#f4e1af;box-shadow:inset 0 3px 0 #c89553,0 4px 0 #9a7053}
+.food-feijao:before{background:#b97951;box-shadow:inset 0 3px 0 #89563e,0 4px 0 #765a48}
+.product-data-row:hover .food-thumb,.lot-data-row:hover .food-thumb,.urgency-panel a:hover .food-thumb{transform:rotate(-6deg) scale(1.08)}
+.form-card{padding:27px 28px}
+.form-title-line{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.form-loop{width:38px;height:38px;color:#95b994;display:inline-flex;align-items:center;justify-content:center}
+.form-loop .ui-icon{width:30px;height:30px}
+.form-card:hover .form-loop .icon-hand{transform:rotate(360deg)}
+.form-intro{font-size:13px;color:#687981;line-height:1.55;margin:8px 0 25px}
+.management-page form label{display:block;color:#22333d;font-size:13px;font-weight:700}
+.management-page form label+label{margin-top:19px}
+.management-page form input,.management-page form select{display:block;width:100%;min-height:47px;margin-top:9px;padding:10px 13px;border:1px solid #cad3d3;border-radius:6px;background:#fff9;color:#26343a;font-size:13px;font-weight:500;outline:0;transition:border-color .2s,background .2s,box-shadow .2s}
+.management-page form input:hover,.management-page form select:hover{border-color:#829d89}
+.management-page form input:focus,.management-page form select:focus{border-color:var(--green);box-shadow:0 0 0 3px #b8d9a865;background:#fff}
+.management-page form input::placeholder{color:#8996a3;opacity:1}
+.management-page form select{appearance:none;background-image:url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="%23243739" stroke-width="1.6"%3E%3Cpath d="m4 7 5 5 5-5"/%3E%3C/svg%3E');background-repeat:no-repeat;background-position:right 13px center;padding-right:38px;cursor:pointer}
+.management-page form label b{color:#e27344}
+.action-button{display:inline-flex;align-items:center;justify-content:center;gap:11px;border:1px solid transparent;background:var(--orange);color:#14281e;border-radius:7px;padding:12px 19px;min-height:51px;font-weight:700;font-size:14px;text-align:center;cursor:pointer;white-space:nowrap;transition:transform .28s,box-shadow .28s,background .28s}
+.action-button:hover,.action-button:focus-visible{background:#ffb77d;transform:translateY(-3px);box-shadow:0 10px 20px #b9783730}
+.action-button .ui-icon{height:20px;width:20px}
+.action-button:hover .icon-arrow,.action-button:focus-visible .icon-arrow{transform:translateX(4px)}
+.form-card form>.action-button{width:100%;margin-top:26px}
+.form-feedback{display:none;font-size:12px;color:var(--green);line-height:1.6;background:#eaf1e8;padding:11px 13px;border-radius:6px;margin-top:16px}
+.form-feedback:target{display:block;animation:panel-detail-in .4s ease-out}
+.doodle-loop{height:53px;width:53px;border:2px solid #aacba6;border-radius:50%;display:grid;place-items:center;color:var(--green);transform:rotate(-15deg);margin-right:18px}
+.doodle-loop .ui-icon{height:28px;width:28px}
+.management-header:hover .doodle-loop{animation:doodle-rock .7s ease-in-out 2}
+
+/* Lotes: sorting is fixed to the illustrative FEFO snapshot, status chips filter in CSS. */
+.inventory-actions{display:flex;align-items:stretch;gap:12px;margin-bottom:16px}
+.search-instruction{position:relative;flex:1;min-width:170px}
+.search-instruction summary{min-height:53px;display:flex;align-items:center;gap:12px;background:#fff9;border:1px solid #ced8d5;border-radius:7px;padding:12px 15px;color:#788895;cursor:pointer;font-size:13px;list-style:none}
+.search-instruction summary::-webkit-details-marker{display:none}
+.search-instruction .ui-icon{width:20px;height:20px;color:#395a65}
+.search-instruction[open] summary{border-color:var(--green);box-shadow:0 0 0 3px #b8d9a866}
+.search-instruction p{position:absolute;z-index:4;top:calc(100% + 7px);width:min(100%,400px);padding:13px 16px;background:#fff;border:1px solid #d8e2d4;border-radius:7px;box-shadow:0 12px 30px #0c3d2b1b;font-size:12px;line-height:1.55}
+.status-filter{display:flex;align-items:center;gap:2px;padding:4px;border:1px solid #d3ded7;border-radius:7px;background:#fff9;flex-shrink:0}
+.status-filter input{position:absolute;opacity:0;width:1px;height:1px}
+.status-filter label{font-size:11px;padding:10px 9px;border-radius:5px;cursor:pointer;white-space:nowrap;color:#64746d;transition:background .2s,color .2s}
+.status-filter input:checked+label{background:#e3eddd;color:#173f35;font-weight:700}
+.status-filter input:focus-visible+label{outline:2px solid var(--orange);outline-offset:2px}
+.inventory-actions>.action-button{min-height:53px}
+.lot-table-head,.lot-data-row{display:grid;grid-template-columns:minmax(195px,2.1fr) minmax(95px,1fr) minmax(72px,.85fr) minmax(130px,1.35fr) minmax(80px,.9fr) 18px;gap:10px;align-items:center}
+.lot-table-head{padding:15px 19px;margin:0;border-radius:7px 7px 0 0}
+.lot-data-row{min-height:71px;padding:10px 18px;border-top:1px solid #e4e9e4;font-size:13px;color:#31434d;transition:background .25s,padding-left .25s}
+.lot-data-row:first-of-type{border-top:0}
+.lot-data-row:hover,.lot-data-row:focus-visible,.lot-data-row:target{background:#edf3ea;padding-left:22px}
+.lot-data-row.status-critical:first-of-type{background:#fff6f0}
+.lot-data-row .food-thumb{width:44px;height:45px}
+.lot-name strong{display:block;font-size:13px;color:#172a29}
+.lot-name small,.date-cell small{display:block;font-size:11px;color:#7d9195;margin-top:3px}
+.date-cell strong{font-weight:600}
+.state-tag{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:76px;width:max-content;padding:7px 10px;border-radius:20px;font-size:11px;font-weight:700}
+.state-tag i{height:8px;width:8px;border-radius:50%;background:currentColor}
+.state-tag.critical{background:#fae5e0;color:#ce5c46}
+.state-tag.attention{background:#fff0d6;color:#bd711f}
+.state-tag.okay{background:#e3efe2;color:#4c8758}
+.lot-data-row>.ui-icon{width:17px;height:17px}
+.inventory-area:has(#status-critical:checked) .lot-data-row:not(.status-critical),
+.inventory-area:has(#status-attention:checked) .lot-data-row:not(.status-attention),
+.inventory-area:has(#status-okay:checked) .lot-data-row:not(.status-okay){display:none}
+.filter-empty{display:none}
+.fefo-banner{display:flex;align-items:center;gap:17px;padding:18px 22px;margin-top:18px;background:#e9f1e6;border-radius:8px;color:var(--green)}
+.fefo-banner>.ui-icon{height:43px;width:43px;border:2px solid #b8d9a8;border-radius:50%;padding:7px;flex-shrink:0}
+.fefo-banner strong{font-family:Alte,Arial,sans-serif;font-size:21px}
+.fefo-banner p{font-size:12px;line-height:1.5;color:#536a62;margin-top:3px}
+.fefo-banner a{margin-left:auto;display:flex;gap:8px;align-items:center;white-space:nowrap;font-size:11px;font-weight:700}
+.fefo-banner a .ui-icon{width:17px;height:17px}
+
+/* Register: quiet six-field form with a drawing that responds to pointer and focus. */
+.breadcrumbs{display:flex;align-items:center;gap:12px;color:#59706e;font-size:12px;margin-bottom:27px}
+.breadcrumbs a{font-weight:700;color:var(--green)}
+.breadcrumbs a:hover{text-decoration:underline}
+.management-header.compact{min-height:0;margin-bottom:27px}
+.register-layout{display:grid;grid-template-columns:minmax(0,2.05fr) minmax(250px,.95fr);gap:16px}
+.register-card{padding:28px}
+.form-section+.form-section{border-top:1px solid #e1e7e1;margin-top:26px;padding-top:26px}
+.section-lead{display:flex;align-items:flex-start;gap:13px;margin-bottom:22px}
+.section-lead>span{display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:50%;background:#e6f0e4;font-family:Alte,sans-serif;font-size:21px;color:var(--green)}
+.section-lead h2{font-size:25px;margin-top:1px}
+.section-lead p{font-size:12px;color:#64788a;margin-top:4px}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px}
+.register-card input[name="fabricacao"],.register-card input[name="validade"]{background-image:url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="%233a5b5a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"%3E%3Crect x="3" y="5" width="18" height="16" rx="2"/%3E%3Cpath d="M7 3v4m10-4v4M3 10h18"/%3E%3C/svg%3E');background-repeat:no-repeat;background-position:right 13px center;padding-right:38px}
+.form-grid label+label{margin:0!important}
+.form-actions{display:flex;align-items:center;justify-content:flex-end;gap:11px;border-top:1px solid #e1e7e1;margin-top:25px;padding-top:24px}
+.secondary-button{border:1px solid #d4deda;border-radius:6px;min-height:51px;min-width:108px;padding:14px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;background:#fff8;transition:border .2s,background .2s}
+.secondary-button:hover{background:#eaf2e7;border-color:#abcab3}
+.register-note{padding:38px 30px;overflow:hidden;background:#e9f2e8;border-radius:9px;display:flex;flex-direction:column;justify-content:center;min-height:620px}
+.register-illustration{height:205px;position:relative;margin:4px 0 35px;color:var(--green)}
+.register-illustration>.icon-box{position:absolute;width:132px;height:132px;left:12%;top:48px;stroke-width:.75;transform:rotate(-8deg);transition:transform .65s cubic-bezier(.2,.8,.2,1)}
+.register-illustration>.icon-clock{position:absolute;width:90px;height:90px;right:5%;bottom:5px;stroke-width:1.1;background:#e9f2e8;border-radius:50%;transition:transform .85s cubic-bezier(.2,.8,.2,1)}
+.register-note:hover .icon-box{transform:translateY(-8px) rotate(0)}
+.register-note:hover .icon-clock{transform:rotate(360deg)}
+.illustration-stroke{position:absolute;width:150px;height:80px;border-top:2px solid #88b790;border-radius:50%;top:5px;right:0;transform:rotate(-22deg)}
+.register-note h2{font-size:clamp(34px,3vw,48px);line-height:.97;letter-spacing:-.06em;color:var(--green)}
+.register-note>p{font-size:17px;line-height:1.48;color:#435a65;margin-top:21px;max-width:270px}
+
+/* Movements: radio switch and reason fields are native HTML/CSS. */
+.movement-layout{display:grid;grid-template-columns:minmax(310px,.95fr) minmax(480px,1.5fr);gap:16px;align-items:stretch}
+.movement-form-card,.history-card{padding:25px}
+.movement-form-card h2,.history-card h2{margin-bottom:21px}
+.movement-switch{display:grid;grid-template-columns:repeat(2,1fr);border:1px solid #cdd8d5;border-radius:7px;overflow:hidden;margin-bottom:23px;background:#f6f6f2}
+.movement-switch input{position:absolute;opacity:0;width:1px;height:1px}
+.movement-switch label{display:flex!important;align-items:center;justify-content:center;gap:9px;padding:12px 6px;cursor:pointer;font-size:14px!important;transition:background .25s}
+.movement-switch label .ui-icon{width:18px;height:18px}
+.movement-switch input:checked+label{background:var(--orange);color:#172922}
+.movement-switch input:focus-visible+label{outline:2px solid var(--green);outline-offset:-3px}
+.movement-form-card form label+label{margin-top:16px}
+.movement-form-card form input,.movement-form-card form select{margin-top:7px}
+.movement-form-card form:has(#kind-loss:checked) .exit-reason-field,
+.movement-form-card form:has(#kind-exit:checked) .loss-reason-field{display:none}
+.stock-note{display:flex;align-items:center;gap:9px;color:#849297;font-size:11px;margin:20px 0}
+.stock-note .ui-icon{width:16px;height:16px}
+.movement-form-card .action-button{width:100%}
+.history-head,.history-row{display:grid;grid-template-columns:100px 88px minmax(140px,1.5fr) 81px 100px;gap:6px;align-items:center}
+.history-head{font-size:9px;padding:13px 12px}
+.history-row{font-size:12px;color:#344954;border-bottom:1px solid #e5e9e5;min-height:91px;padding:12px}
+.history-row:hover{background:#eaf2e650}
+.history-product strong{display:block;font-weight:700;color:#1a2828}
+.history-product small{display:block;color:#829294;margin-top:5px}
+.history-type{display:inline-flex;gap:5px;align-items:center;width:max-content;padding:5px 7px;border-radius:15px;font-weight:700;font-size:10px}
+.history-type .ui-icon{width:15px;height:15px}
+.history-type.loss{color:#ca624c;background:#fff0e8}
+.history-type.exit{color:#47765d;background:#e5efe5}
+.history-insight{display:flex;align-items:center;justify-content:space-between;gap:20px;background:#f5f0e7;border-radius:8px;padding:23px 25px;margin-top:29px;min-height:150px}
+.history-insight small{font-weight:700;color:#9b7c59;font-size:10px;letter-spacing:.1em}
+.history-insight p{font-size:19px;color:#273a3b;margin:8px 0}
+.history-insight b{color:#c45d29;font-size:20px}
+.history-insight>span{display:flex;align-items:center;gap:4px;color:var(--green)}
+.history-insight>span .ui-icon{width:30px;height:30px}
+.history-insight:hover>span .icon-arrow{transform:translateX(7px)}
+
+/* Reports: the marks encode exact illustrative amounts, with CSS draw-in. */
+.report-metrics{display:grid;grid-template-columns:165px 1fr 1fr;align-items:center;margin-bottom:18px;padding:20px 30px;min-height:151px}
+.clock-doodle{display:flex;align-items:center;color:var(--green)}
+.clock-doodle .ui-icon:first-child{width:56px;height:56px;stroke-width:1.1}
+.clock-doodle .ui-icon:last-child{width:30px;height:30px;color:#e9752f;margin-left:-4px;transform:rotate(-31deg)}
+.report-metrics>div:nth-child(2){border-right:1px solid #dce5dd;padding-right:18px}
+.report-metrics>div:nth-child(3){padding-left:clamp(15px,4vw,55px)}
+.report-metrics strong{font-family:Alte,Arial,sans-serif;font-size:clamp(38px,4.2vw,63px);letter-spacing:-.055em;line-height:1;color:#e46a2a}
+.report-metrics>div:nth-child(3) strong{color:var(--green)}
+.report-metrics p{font-size:16px;color:#566c78;margin-top:8px}
+.reports-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.report-panel{padding:24px 25px;min-height:240px}
+.report-panel h2{font-size:26px;margin-bottom:27px}
+.report-row{display:grid;grid-template-columns:110px minmax(90px,1fr) 48px;gap:15px;align-items:center;margin-bottom:24px}
+.report-row>div strong{font-size:13px;display:block}
+.report-row>div small{color:#80919a;font-size:11px;display:block;margin-top:4px}
+.report-row>b{font-size:12px;color:#425870;text-align:right}
+.report-bar{display:block;background:#e9eeea;height:11px;border-radius:3px;overflow:hidden}
+.report-bar i{display:block;height:100%;width:var(--fill);border-radius:3px;transform-origin:left;transition:filter .25s}
+.report-bar i.orange{background:var(--orange)}
+.report-bar i.sage{background:#a3c99a}
+.report-panel:hover .report-bar i{filter:saturate(1.4)}
+.category-row{grid-template-columns:110px 1fr;gap:18px}
+.urgency-panel{background:#edf3e9;border-radius:9px;margin-top:18px;padding:24px 25px}
+.urgency-panel h2{font-size:25px;letter-spacing:-.04em;line-height:1.2;margin-bottom:10px}
+.urgency-panel a{display:grid;grid-template-columns:50px minmax(140px,1.4fr) 80px 120px minmax(80px,1fr);align-items:center;gap:12px;border-bottom:1px solid #d7e3d5;padding:8px 8px 8px 0;font-size:13px;transition:background .2s,padding-left .2s}
+.urgency-panel a:last-child{border-bottom:0}
+.urgency-panel a:hover,.urgency-panel a:focus-visible{background:#dcebd8;padding-left:8px}
+.urgency-panel a strong{font-weight:700}
+.urgency-panel a em{font-style:normal;font-size:11px;font-weight:700;color:var(--green);display:flex;align-items:center;gap:7px;justify-self:end;white-space:nowrap}
+.urgency-panel a em svg{width:18px;height:18px}
+.report-method{display:flex;align-items:center;gap:9px;margin-top:15px;color:#7d8e98;font-size:11px}
+.report-method .ui-icon{width:15px;height:15px}
+.heading-rays{display:inline-block;width:39px;height:39px;vertical-align:top;margin:0 0 0 4px;background:linear-gradient(120deg,transparent 46%,#ef884b 47% 54%,transparent 55%) center 0/8px 17px no-repeat;transform:rotate(26deg)}
+.heading-rays:before,.heading-rays:after{content:'';display:block;width:17px;height:3px;border-radius:3px;background:#ef884b;position:relative;top:23px;left:17px;transform:rotate(-27deg)}
+.heading-rays:after{left:23px;top:30px;transform:rotate(8deg)}
+
+/* Every new surface enters softly; this is presentation only, never data logic. */
+.management-page .fade-up{animation:mg-enter .55s cubic-bezier(.2,.8,.2,1) both}
+.management-page .fade-up:nth-child(2){animation-delay:.07s}
+.management-page .fade-up:nth-child(3){animation-delay:.13s}
+.management-page .reveal-pending{opacity:0;transform:translateY(9px)}
+.management-page .report-bar i{animation:mg-bar .9s cubic-bezier(.2,.8,.2,1) .28s both}
+.management-page .state-tag i{animation:mg-pulse 2.5s ease-in-out infinite}
+.management-page.is-leaving .app-main{opacity:0;transform:translateY(9px);transition:opacity .2s,transform .2s}
+.management-page .is-visible{animation:mg-enter .55s cubic-bezier(.2,.8,.2,1) both}
+@keyframes mg-enter{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes mg-bar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes mg-pulse{0%,100%{box-shadow:0 0 0 0 currentColor}50%{box-shadow:0 0 0 4px transparent}}
+@keyframes doodle-rock{50%{transform:rotate(20deg)}100%{transform:rotate(-15deg)}}
+
+@media(max-width:1250px){
+  .management-page .app-shell{grid-template-columns:210px minmax(0,1fr)}
+  .management-page .app-main{padding:32px 25px}
+  .management-page .app-sidebar{padding:28px 14px}
+  .management-page .app-nav-link{padding:12px}
+  .management-page .app-sidebar>.brand>span{font-size:29px}
+  .management-page .app-sidebar>.brand svg{width:39px;height:39px}
+  .product-data-row,.lot-data-row{font-size:12px}
+  .food-thumb{width:39px;height:41px}
+  .products-layout{grid-template-columns:minmax(0,1.5fr) minmax(285px,1fr)}
+  .inventory-actions{flex-wrap:wrap}
+  .inventory-actions>.action-button{margin-left:auto}
+  .status-filter{order:3;width:100%;justify-content:center}
+  .search-instruction{flex:1}
+  .history-head,.history-row{grid-template-columns:86px 75px minmax(120px,1fr) 68px 75px}
+}
+@media(max-width:1030px){
+  .products-layout,.movement-layout,.register-layout{grid-template-columns:1fr}
+  .product-list-card,.form-card{min-height:0}
+  .movement-form-card,.history-card{padding:25px}
+  .register-note{min-height:280px;display:grid;grid-template-columns:220px 1fr;gap:4px 24px;align-items:center}
+  .register-illustration{grid-row:1 / 3;margin:0;height:180px}
+  .register-note>p{margin:0}
+  .history-head,.history-row{grid-template-columns:100px 88px minmax(140px,1.5fr) 80px 100px}
+  .report-metrics{grid-template-columns:90px 1fr 1fr}
+  .clock-doodle .ui-icon:first-child{width:43px;height:43px}
+  .lot-table-head,.lot-data-row{grid-template-columns:minmax(158px,1.8fr) 97px 74px minmax(115px,1fr) 76px 15px;gap:6px;padding-left:12px;padding-right:12px}
+  .lot-data-row .food-thumb{display:none}
+}
+@media(max-width:780px){
+  .management-page .app-shell{display:block}
+  .management-page .app-sidebar{position:relative;min-height:0;height:auto;padding:20px 20px 0;display:block}
+  .management-page .app-sidebar>.brand{margin:0 0 16px}
+  .management-page .app-sidebar nav{display:flex;overflow-x:auto;gap:5px;margin:0 -8px;padding:0 0 13px;scrollbar-width:none}
+  .management-page .app-nav-link{flex-shrink:0;gap:7px;padding:10px;font-size:11px}
+  .management-page .app-nav-link .ui-icon{width:18px;height:18px}
+  .management-page .sidebar-bottom{position:absolute;right:20px;top:20px;padding:0}
+  .management-page .profile-marker{padding:0;border:0}
+  .management-page .profile-marker small,.management-page .sidebar-utility,.management-page .sidebar-bottom>p{display:none}
+  .management-page .app-main{padding:27px 18px}
+  .management-header{min-height:0;margin-bottom:22px}
+  .management-header h1{font-size:clamp(41px,7vw,59px)}
+  .reports-grid{grid-template-columns:1fr}
+  .report-panel{min-height:0}
+  .report-metrics{padding:22px 16px;grid-template-columns:65px 1fr 1fr}
+  .report-metrics strong{font-size:clamp(27px,5vw,47px)}
+  .report-metrics p{font-size:12px}
+  .lot-table{overflow-x:auto}
+  .lot-table-head,.lot-data-row{min-width:720px}
+  .urgency-panel a{grid-template-columns:35px minmax(110px,1fr) 60px 84px;gap:5px;font-size:12px}
+  .urgency-panel a .food-thumb{width:33px;height:34px}
+  .urgency-panel a em{grid-column:2 / -1;justify-self:start;margin-top:2px}
+}
+@media(max-width:540px){
+  .management-page .app-sidebar>.brand>span{font-size:26px}
+  .management-page .app-sidebar>.brand svg{height:33px;width:33px}
+  .management-page .profile-marker .profile-avatar{display:none}
+  .management-header{align-items:flex-start;flex-wrap:wrap;gap:12px}
+  .management-header h1{font-size:42px}
+  .management-header p:not(.management-eyebrow){font-size:15px}
+  .management-eyebrow{font-size:10px}
+  .snapshot-date{font-size:11px;padding:7px 9px}
+  .snapshot-date .ui-icon{width:16px;height:16px}
+  .product-list-card{padding:19px 10px}
+  .card-heading{padding:0 8px 16px}
+  .card-heading h2{font-size:22px}
+  .card-heading p{font-size:11px}
+  .quiet-link{font-size:0}
+  .quiet-link .ui-icon{width:18px;height:18px}
+  .product-table{overflow-x:auto}
+  .product-table-head,.product-data-row{min-width:570px}
+  .form-card,.register-card,.movement-form-card,.history-card{padding:19px}
+  .form-grid{grid-template-columns:1fr;gap:15px}
+  .form-grid label+label{margin:0!important}
+  .section-lead h2{font-size:22px}
+  .section-lead p{font-size:11px}
+  .register-note{padding:23px;grid-template-columns:105px 1fr;min-height:180px;gap:5px 10px}
+  .register-illustration{height:115px}
+  .register-illustration>.icon-box{width:90px;height:90px;left:0;top:15px}
+  .register-illustration>.icon-clock{width:55px;height:55px;right:0;bottom:0}
+  .register-note h2{font-size:32px}
+  .register-note>p{font-size:12px;grid-column:2}
+  .history-table{overflow-x:auto}
+  .history-head,.history-row{min-width:570px}
+  .history-insight{padding:18px;margin-top:18px;min-height:120px}
+  .history-insight p,.history-insight b{font-size:16px}
+  .history-insight>span .ui-icon{width:20px;height:20px}
+  .fefo-banner{padding:15px;gap:10px;align-items:flex-start}
+  .fefo-banner>.ui-icon{width:31px;height:31px;padding:4px}
+  .fefo-banner a{margin:0;align-self:flex-end;font-size:0}
+  .fefo-banner a .ui-icon{width:19px;height:19px}
+  .inventory-actions .search-instruction{flex-basis:100%}
+  .status-filter{order:2;overflow-x:auto;justify-content:flex-start}
+  .inventory-actions>.action-button{order:3;width:100%}
+  .report-metrics{grid-template-columns:1fr 1fr;gap:14px;min-height:0}
+  .clock-doodle{display:none}
+  .report-metrics>div:nth-child(3){padding-left:15px}
+  .report-metrics strong{font-size:31px}
+  .report-metrics p{font-size:11px}
+  .report-row{grid-template-columns:90px 1fr 38px;gap:9px}
+  .report-panel h2,.urgency-panel h2{font-size:22px}
+  .report-method{font-size:10px;line-height:1.5}
+}
+@media(prefers-reduced-motion:reduce){
+  .management-page .fade-up,.management-page .is-visible,.management-page .report-bar i,
+  .management-page .state-tag i{animation:none!important}
+  .management-page .reveal-pending{opacity:1;transform:none}
+  .management-page .app-main,.management-page .food-thumb,.management-page .action-button,
+  .management-page .lot-data-row,.management-page .product-data-row,
+  .management-page .register-illustration .ui-icon{transition:none!important}
+}
